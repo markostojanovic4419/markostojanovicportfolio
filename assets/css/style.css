@@ -1,0 +1,637 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Cairo", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@-webkit-keyframes animacijaZaobljenjeIvica {
+  from {
+    border-radius: 0px;
+  }
+  to {
+    border-radius: 20px 0px;
+  }
+}
+
+@keyframes animacijaZaobljenjeIvica {
+  from {
+    border-radius: 0px;
+  }
+  to {
+    border-radius: 20px 0px;
+  }
+}
+
+.marginaCentar {
+  margin: 0px auto;
+}
+
+.tekstCentar {
+  text-align: center;
+}
+
+p, a {
+  font-size: 17px;
+}
+
+p {
+  font-weight: 300;
+  text-align: justify;
+}
+
+p a {
+  text-decoration: underline;
+}
+
+.red {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.kolona {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.prelom {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.vertikalnoCentar {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+h1, h2, h3, h4, h5, a {
+  font-weight: 600;
+  color: #94ae3f;
+}
+
+.plaviBlok {
+  background-color: #243754;
+  width: 100%;
+}
+
+.plaviBlok p {
+  color: #ebebeb;
+}
+
+.siviBlok {
+  background-color: #ebebeb;
+  width: 100%;
+}
+
+.siviBlok p {
+  color: #243754;
+}
+
+.zelenaLinija {
+  width: 100px;
+  padding: 4px 0px;
+  border-radius: 20px 0px;
+  background-color: #94ae3f;
+}
+
+h1 {
+  font-size: 52px;
+}
+
+h2 {
+  font-size: 38px;
+}
+
+h3 {
+  font-size: 35px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+header {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  position: fixed;
+  z-index: 500;
+  -webkit-box-shadow: 0px 2px 10px #000000;
+          box-shadow: 0px 2px 10px #000000;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+.omot {
+  width: 1024px;
+}
+
+#logo {
+  width: 50px;
+}
+
+nav {
+  width: 730px;
+}
+
+nav ul li {
+  border-right: 1px solid #94ae3f;
+}
+
+nav ul li a {
+  padding: 10px 10px;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  background-color: #ebebeb;
+  color: #243754;
+  -webkit-transition: 1s;
+  transition: 1s;
+  border-radius: 20px 0px;
+  -webkit-animation: animacijaZaobljenjeIvica 2s;
+          animation: animacijaZaobljenjeIvica 2s;
+}
+
+nav ul li .aktivanLink {
+  background-color: #ebebeb;
+  color: #243754;
+  -webkit-transition: 1s;
+  transition: 1s;
+  border-radius: 20px 0px;
+  -webkit-animation: animacijaZaobljenjeIvica 2s;
+          animation: animacijaZaobljenjeIvica 2s;
+}
+
+nav ul #poslednjaLinija {
+  border-right: 0px solid #94ae3f;
+}
+
+.horizontalnoKraj {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.horizontalnoIzmedju {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.horizontalnoCentar {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#pozadinskaSlika {
+  position: relative;
+  height: 100vh;
+  z-index: 100;
+  width: 100%;
+  background-image: url("../slike/markoStojanovic.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+#pozadinskaSlika h1 {
+  padding-top: 400px;
+}
+
+#pozadinaNaslova {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 200;
+  background-color: #000000;
+  opacity: 0.6;
+  width: 100%;
+}
+
+.slika {
+  width: 430px;
+}
+
+.slika img {
+  border-radius: 20px 0px;
+}
+
+.zastava {
+  width: 230px;
+}
+
+.zastava img {
+  border-radius: 20px 0px;
+}
+
+.lista {
+  width: 300px;
+}
+
+.lista ul li p::before {
+  content: "";
+  display: inline-block;
+  padding: 6px;
+  background-color: #243754;
+  border-radius: 5px 0px;
+  margin-right: 20px;
+  margin-left: 5px;
+}
+
+.tekst {
+  width: 430px;
+}
+
+.razmakIzmedjuBlokova {
+  padding: 52px 0px;
+}
+
+.razmakIzmedjuSadrzaja {
+  margin-bottom: 20px;
+}
+
+.informacije {
+  width: 230px;
+}
+
+.informacije span p {
+  font-style: oblique;
+  color: #94ae3f;
+}
+
+.ikonice {
+  font-size: 40px !important;
+  color: #94ae3f;
+}
+
+.prelomReci {
+  word-wrap: break-word;
+}
+
+.elementForme {
+  width: 44%;
+}
+
+.prelom h4 {
+  width: 100%;
+}
+
+input[type=text], input[type=email], input[type=tel], select, input[type=date], input[type=time], textarea, button[type=submit] {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 20px 0px;
+  padding: 8px 0px;
+  outline: none;
+  font-size: 17px;
+  font-weight: 300;
+  color: #243754;
+}
+
+input[type=text], input[type=email], input[type=tel], select, input[type=date], input[type=time], textarea {
+  border: 2px solid #243754;
+  -webkit-transition: border 1s;
+  transition: border 1s;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, select:focus, input[type=date]:focus, input[type=time]:focus, textarea:focus {
+  border: 2px solid #94ae3f;
+}
+
+button[type=submit] {
+  background-color: #94ae3f;
+}
+
+button[type=submit]:hover {
+  color: #ffffff;
+}
+
+.zvezdica {
+  color: #ff0000;
+  margin-left: 5px;
+}
+
+footer {
+  width: 100%;
+}
+
+footer .ikonice {
+  margin-right: 5px;
+}
+
+footer a span {
+  color: #ebebeb;
+}
+
+footer a span:hover {
+  color: #94ae3f;
+}
+
+urlset {
+  margin: 30px auto;
+  background-color: #ebebeb;
+  border: 1px solid #243754;
+  padding: 15px;
+  width: 1024px;
+  border-radius: 20px 0px;
+  display: block;
+}
+
+url {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px 0px;
+  border-radius: 20px 0px;
+  padding: 15px;
+  background-color: #243754;
+}
+
+loc, lastmod, changefreq, priority {
+  color: #94ae3f;
+}
+
+@media screen and (max-width: 1024px) {
+  .omot {
+    width: 80%;
+  }
+  p, a {
+    font-size: 13px;
+  }
+  #logo {
+    width: 7%;
+  }
+  nav {
+    width: 80%;
+  }
+  #pozadinskaSlika h1 {
+    padding-top: 45%;
+  }
+  .slika {
+    width: 45%;
+  }
+  .tekst {
+    width: 45%;
+  }
+  .zastava {
+    width: 24%;
+  }
+  .informacije {
+    width: 30%;
+  }
+  .informacije:last-of-type {
+    width: 100%;
+  }
+  .razmakIzmedjuSadrzajaZaLaptopove {
+    margin-bottom: 20px;
+  }
+  footer .informacije {
+    width: 22%;
+  }
+  footer .informacije:last-of-type {
+    width: 22%;
+  }
+  input[type=text], input[type=email], input[type=tel], select, input[type=date], input[type=time], textarea, button[type=submit] {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .omot {
+    width: 96%;
+  }
+  #logo {
+    width: 6%;
+  }
+  #pozadinskaSlika h1 {
+    padding-top: 50%;
+  }
+  .prelomZaTablete {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .razmakIzmedjuBlokova {
+    padding: 50px 0px;
+  }
+  .razmakIzmedjuSadrzaja {
+    margin-bottom: 0px;
+  }
+  .razmakIzmedjuSadrzajaZaLaptopove {
+    margin-bottom: 0px;
+  }
+  .razmakIzmedjuSadrzajaZaTablete {
+    margin-bottom: 18px;
+  }
+  p, a {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 39px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  @-webkit-keyframes animacijaZaobljenjeIvica {
+    from {
+      border-radius: 0px;
+    }
+    to {
+      border-radius: 12px 0px;
+    }
+  }
+  @keyframes animacijaZaobljenjeIvica {
+    from {
+      border-radius: 0px;
+    }
+    to {
+      border-radius: 12px 0px;
+    }
+  }
+  nav ul li a {
+    padding: 5px 5px;
+  }
+  nav ul li a:hover {
+    border-radius: 12px 0px;
+  }
+  nav ul li .aktivanLink {
+    border-radius: 12px 0px;
+  }
+  .zelenaLinija {
+    width: 70px;
+    padding: 3px 0px;
+    border-radius: 12px 0px;
+  }
+  .slika img {
+    border-radius: 12px 0px;
+  }
+  .zastava {
+    width: 45%;
+  }
+  .zastava img {
+    border-radius: 12px 0px;
+  }
+  .informacije {
+    width: 45%;
+  }
+  .informacije:last-of-type {
+    width: 45%;
+  }
+  input[type=text], input[type=email], input[type=tel], select, input[type=date], input[type=time], textarea, button[type=submit] {
+    border-radius: 12px 0px;
+    padding: 6px 0px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .omot {
+    width: 98%;
+  }
+  .razmakIzmedjuBlokova {
+    padding: 20px 0px;
+  }
+  .razmakIzmedjuSadrzajaZaTablete {
+    margin-bottom: 0px;
+  }
+  .razmakIzmedjuSadrzajaZaMobilne {
+    margin-bottom: 16px;
+  }
+  p, a {
+    font-size: 10px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  h5 {
+    font-size: 14px;
+  }
+  @-webkit-keyframes animacijaZaobljenjeIvica {
+    from {
+      border-radius: 0px;
+    }
+    to {
+      border-radius: 8px 0px;
+    }
+  }
+  @keyframes animacijaZaobljenjeIvica {
+    from {
+      border-radius: 0px;
+    }
+    to {
+      border-radius: 8px 0px;
+    }
+  }
+  header {
+    position: static;
+    padding: 5px 0px;
+  }
+  .redZaMobilne {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .kolonaZaMobilne {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav ul li {
+    border-right: 0px solid #94ae3f;
+  }
+  nav ul li a {
+    padding: 3px 3px;
+  }
+  nav ul li a:hover {
+    border-radius: 8px 0px;
+  }
+  nav ul li .aktivanLink {
+    border-radius: 8px 0px;
+  }
+  .vertikalnoCentarZaMobilne {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #pozadinskaSlika {
+    display: none;
+  }
+  .zelenaLinija {
+    width: 60px;
+    padding: 2px 0px;
+    border-radius: 8px 0px;
+  }
+  .slika {
+    width: 100%;
+  }
+  .slika img {
+    border-radius: 8px 0px;
+  }
+  .zastava {
+    width: 100%;
+  }
+  .zastava img {
+    border-radius: 8px 0px;
+  }
+  .lista {
+    width: 100%;
+  }
+  .tekst {
+    width: 100%;
+  }
+  .informacije {
+    width: 100%;
+  }
+  .informacije:last-of-type {
+    width: 100%;
+  }
+  input[type=text], input[type=email], input[type=tel], select, input[type=date], input[type=time], textarea, button[type=submit] {
+    border-radius: 8px 0px;
+    padding: 4px 0px;
+    font-size: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

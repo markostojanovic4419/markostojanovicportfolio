@@ -1,0 +1,685 @@
+$zelenaBoja: #94ae3f;
+$sivaBoja: #ebebeb;
+$plavaBoja: #243754;
+$crnaBoja: #000000;
+$belaBoja: #ffffff;
+$cairo: 'Cairo', sans-serif;
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: $cairo;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+@mixin zelenaPozadina {
+    background-color: $zelenaBoja;
+}
+
+@mixin zeleniTekst {
+    color: $zelenaBoja;
+}
+
+@mixin sivaPozadina {
+    background-color: $sivaBoja;
+}
+
+@mixin siviTekst {
+    color: $sivaBoja;
+}
+
+@mixin punaSirina {
+    width: 100%;
+}
+
+@mixin triKoloneZaLaptopove {
+    width: 30%;
+}
+
+@mixin dveKoloneZaTablete {
+    width: 45%;
+}
+
+@mixin plaviTekst {
+    color: $plavaBoja;
+}
+
+@mixin beoTekst {
+    color: $belaBoja;
+}
+
+@mixin plavaPozadina {
+    background-color: $plavaBoja;
+}
+
+@keyframes animacijaZaobljenjeIvica {
+    from {border-radius: 0px;}
+    to {border-radius: 20px 0px;}
+}
+
+@mixin tranzicija {
+    transition: 1s;
+}
+
+.marginaCentar {
+    margin: 0px auto;
+}
+
+.tekstCentar {
+    text-align: center;
+}
+
+p, a {
+    font-size: 17px;
+}
+
+p {
+    font-weight: 300;
+    text-align: justify;
+    a {
+        text-decoration: underline;
+    }
+}
+
+.red {
+    display: flex;
+}
+
+.kolona {
+    flex-direction: column;
+}
+
+.prelom  {
+    flex-wrap: wrap;
+}
+
+.vertikalnoCentar {
+    align-items: center;
+}
+
+h1,h2,h3,h4,h5,a {
+    font-weight: 600;
+    @include zeleniTekst;
+}
+
+.plaviBlok {
+    @include plavaPozadina;
+    @include punaSirina;
+    p {
+        @include siviTekst;
+    }
+}
+
+.siviBlok {
+    @include sivaPozadina;
+    @include punaSirina;
+    p {
+        @include plaviTekst;
+    }
+}
+
+.zelenaLinija {
+    width: 100px;
+    padding: 4px 0px;
+    border-radius: 20px 0px;
+    @include zelenaPozadina;
+}
+
+h1 {
+    font-size: 52px;
+}
+
+h2 {
+	font-size: 38px;
+}
+
+h3 {
+	font-size: 35px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+header {
+    top: 0px;
+	left: 0px;
+    right: 0px;
+    position: fixed;
+    z-index: 500;
+    box-shadow: 0px 2px 10px $crnaBoja;
+    @include punaSirina;
+}
+
+img {
+    @include punaSirina;
+}
+
+.omot {
+    width: 1024px;
+}
+
+#logo {
+	width: 50px;
+}
+
+nav {
+    width: 730px;
+    ul {
+        li {
+            border-right: 1px solid $zelenaBoja;
+            a {
+                padding: 10px 10px;
+                text-transform: uppercase;
+                &:hover {
+                    @include sivaPozadina;
+                    @include plaviTekst;
+                    @include tranzicija;
+                    border-radius: 20px 0px;
+                    animation: animacijaZaobljenjeIvica 2s;
+                }
+            }
+            .aktivanLink {
+                @include sivaPozadina;
+                @include plaviTekst;
+                @include tranzicija;
+                border-radius: 20px 0px;
+                animation: animacijaZaobljenjeIvica 2s;
+            }
+        }
+        #poslednjaLinija {
+            border-right: 0px solid $zelenaBoja;
+        }
+    }
+}
+
+.horizontalno {
+    &Kraj {
+        justify-content: flex-end;
+    }
+    &Izmedju {
+        justify-content: space-between;
+    }
+    &Centar {
+        justify-content: center;
+    }
+}
+
+@mixin pozadinskaSlika ($putanja) {
+    background: {
+        image: url($putanja);
+        size: cover;
+        attachment: fixed;
+    }
+    @include punaSirina;
+}
+
+#pozadinskaSlika {
+    position: relative;
+    height: 100vh;
+    z-index: 100;
+    h1 {
+        padding-top: 400px;
+    }
+    @include punaSirina;
+    @include pozadinskaSlika("../slike/markoStojanovic.jpg");
+}
+
+#pozadinaNaslova {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: 200;
+	background-color: $crnaBoja;
+    opacity: 0.6;
+    @include punaSirina;
+}
+
+.slika {
+    width: 430px;
+    img {
+        border-radius: 20px 0px;
+    }
+}
+
+.zastava {
+    width: 230px;
+    img {
+        border-radius: 20px 0px;
+    }
+}
+
+.lista {
+    width: 300px;
+    ul {
+        li {
+            p {
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    padding: 6px;
+                    @include plavaPozadina;
+                    border-radius: 5px 0px;
+                    margin-right: 20px;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+.tekst {
+    width: 430px;
+}
+
+.razmak {
+    &IzmedjuBlokova {
+        padding: 52px 0px;
+    }
+    &IzmedjuSadrzaja {
+        margin-bottom: 20px;
+    }
+}
+
+.informacije {
+    width: 230px;
+    span {
+        p {
+            font-style: oblique;
+            @include zeleniTekst;
+        }
+    }
+}
+
+.ikonice {
+    font-size: 40px !important;
+    @include zeleniTekst;
+}
+
+.prelomReci {
+    word-wrap: break-word;
+}
+
+.elementForme {
+    width: 44%;
+}
+
+.prelom h4 {
+    @include punaSirina;
+}
+
+input[type=text],input[type=email],input[type=tel],select,input[type=date],input[type=time],textarea,button[type=submit] {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 20px 0px;
+    padding: 8px 0px;
+    outline: none;
+    font-size: 17px;
+    font-weight: 300;
+    @include plaviTekst;
+}
+
+input[type=text],input[type=email],input[type=tel],select,input[type=date],input[type=time],textarea {
+    border: 2px solid $plavaBoja;
+    transition: border 1s;
+}
+
+input[type=text]:focus,input[type=email]:focus,input[type=tel]:focus,select:focus,input[type=date]:focus,input[type=time]:focus,textarea:focus {
+    border: 2px solid $zelenaBoja;
+}
+
+button[type=submit] {
+    @include zelenaPozadina;
+    &:hover {
+        color: #ffffff;
+    }
+}
+
+.zvezdica {
+    color: #ff0000;
+	margin-left: 5px;
+}
+
+footer {
+    width: 100%;
+    .ikonice {
+        margin-right: 5px;
+    }
+    a {
+        span {
+            @include siviTekst;
+            &:hover {
+                @include zeleniTekst;
+            }
+        }
+    }
+}
+
+urlset {
+    margin: 30px auto;
+    @include sivaPozadina;
+    border: 1px solid $plavaBoja;
+    padding: 15px;
+    width: 1024px;
+    border-radius: 20px 0px;
+    display: block;
+}
+
+url {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0px;
+    border-radius: 20px 0px;
+    padding: 15px;
+    @include plavaPozadina;
+}
+
+loc, lastmod, changefreq, priority {
+	@include zeleniTekst;
+}
+
+@media screen and (max-width: 1024px) {
+    .omot {
+        width: 80%;
+    }
+
+    p,a {
+        font-size: 13px;
+    }
+
+    #logo {
+        width: 7%;
+    }
+
+    nav {
+        width: 80%;
+    }
+
+    #pozadinskaSlika {
+        h1 {
+        padding-top: 45%;
+        }
+    }
+
+    .slika {
+        width: 45%;
+    }
+
+    .tekst {
+        width: 45%;
+    }
+
+    .zastava {
+        width: 24%;
+    }
+
+    .informacije {
+        @include triKoloneZaLaptopove;
+        &:last-of-type {
+            @include punaSirina;
+        }
+    }
+
+    .razmakIzmedjuSadrzajaZaLaptopove {
+        margin-bottom: 20px;
+    }
+
+    footer {
+        .informacije {
+            width: 22%;
+            &:last-of-type {
+                width: 22%;
+            }
+        }
+    }
+
+    input[type=text],input[type=email],input[type=tel],select,input[type=date],input[type=time],textarea,button[type=submit] {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .omot {
+        width: 96%;
+    }
+
+    #logo {
+        width: 6%;
+    }
+
+    #pozadinskaSlika {
+        h1 {
+        padding-top: 50%;
+        }
+    }
+
+    .prelomZaTablete {
+        flex-wrap: wrap;
+    }
+
+    .razmak {
+        &IzmedjuBlokova {
+            padding: 50px 0px;
+        }
+        &IzmedjuSadrzaja {
+            margin-bottom: 0px;
+        }
+        &IzmedjuSadrzajaZaLaptopove {
+            margin-bottom: 0px;
+        }
+        &IzmedjuSadrzajaZaTablete {
+            margin-bottom: 18px;
+        }
+    }
+
+    p, a {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 39px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    @keyframes animacijaZaobljenjeIvica {
+        from {border-radius: 0px;}
+        to {border-radius: 12px 0px;}
+    }
+
+    nav {
+        ul {
+            li {
+                a {
+                    padding: 5px 5px;
+                    &:hover {
+                        border-radius: 12px 0px;
+                    }
+                }
+                .aktivanLink {
+                    border-radius: 12px 0px;
+                }
+            }
+        }
+    }
+
+    .zelenaLinija {
+        width: 70px;
+        padding: 3px 0px;
+        border-radius: 12px 0px;
+    }
+
+    .slika {
+        img {
+            border-radius: 12px 0px;
+        }
+    }
+
+    .zastava {
+        @include dveKoloneZaTablete;
+        img {
+            border-radius: 12px 0px;
+        }
+    }
+
+    .informacije {
+        @include dveKoloneZaTablete;
+        &:last-of-type {
+            @include dveKoloneZaTablete;
+        }
+    }
+
+    input[type=text],input[type=email],input[type=tel],select,input[type=date],input[type=time],textarea,button[type=submit] {
+        border-radius: 12px 0px;
+        padding: 6px 0px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .omot {
+        width: 98%;
+    }
+
+    .razmak {
+        &IzmedjuBlokova {
+            padding: 20px 0px;
+        }
+        &IzmedjuSadrzajaZaTablete {
+            margin-bottom: 0px;
+        }
+        &IzmedjuSadrzajaZaMobilne {
+            margin-bottom: 16px;
+        }
+    }
+
+    p, a {
+        font-size: 10px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    h5 {
+        font-size: 14px;
+    }
+
+    @keyframes animacijaZaobljenjeIvica {
+        from {border-radius: 0px;}
+        to {border-radius: 8px 0px;}
+    }
+
+    header {
+        position: static;
+        padding: 5px 0px;
+    }
+
+    .redZaMobilne {
+        display: flex;
+    }
+
+    .kolonaZaMobilne {
+        flex-direction: column;
+    }
+
+    nav {
+        ul {
+            li {
+                border-right: 0px solid $zelenaBoja;
+                a {
+                    padding: 3px 3px;
+                    &:hover {
+                        border-radius: 8px 0px;
+                    }
+                }
+                .aktivanLink {
+                    border-radius: 8px 0px;
+                }
+            }
+        }
+    }
+
+    .vertikalnoCentarZaMobilne {
+        align-items: center;
+    }
+
+    #pozadinskaSlika {
+        display: none;
+    }
+
+    .zelenaLinija {
+        width: 60px;
+        padding: 2px 0px;
+        border-radius: 8px 0px;
+    }
+
+    .slika {
+        img {
+        border-radius: 8px 0px;
+        }
+        @include punaSirina;
+    }
+
+    .zastava {
+        img {
+            border-radius: 8px 0px;
+        }
+        @include punaSirina;
+    }
+
+    .lista  {
+        @include punaSirina;
+    }
+
+    .tekst {
+        @include punaSirina;
+    }
+
+    .informacije {
+        @include punaSirina;
+        &:last-of-type {
+            @include punaSirina;
+        }
+    }
+
+    input[type=text],input[type=email],input[type=tel],select,input[type=date],input[type=time],textarea,button[type=submit] {
+        border-radius: 8px 0px;
+        padding: 4px 0px;
+        font-size: 10px;
+    }
+}

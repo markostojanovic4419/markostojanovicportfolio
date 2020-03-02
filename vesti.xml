@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0">
+    <channel>
+        <title>Vesti o Marku Stojanoviću</title>
+		<link>https://markostojanovic4419.github.io/markostojanovicportfolio</link>
+		<description>Najnovije vesti o Marku Stojanoviću brzo i jednostavno</description>
+        <item>
+			<title>Interesovanja</title>
+			<link>https://markostojanovic4419.github.io/markostojanovicportfolio/index.html#hobiji</link>
+			<description>Moj omiljeni film predstavlja vestern italijanskog režisera Serđa Leonea Dobar loš zao u kojem glavnu ulogu Blondija tumači američki glumac i dvostruki dobitnik Oskara za najbolji film i režiranje Klint Istvud koji je ujedno i moj omiljeni glumac.</description>
+		</item>
+        <item>
+			<title>Sposobnosti</title>
+			<link>https://markostojanovic4419.github.io/markostojanovicportfolio/index.html#vestine</link>
+			<description>Moje veštine iz veb dizajna se baziraju na poznavanju HTML-a u verzijama 4 i 5, CSS-a u verzijama 2 i 3, XML-a, SEO-a kao i prilagođavanja veb sajta za ostale uređaje.</description>
+		</item>
+		<item>
+			<title>Prednosti</title>
+			<link>https://markostojanovic4419.github.io/markostojanovicportfolio/index.html#preporuke</link>
+			<description>Korektan sam prema svim svojim klijentima i obaveze sa moje strane ispunjavam u potpunosti i na vreme.</description>
+		</item>
+		<item>
+			<title>Kako me možete kontaktirati</title>
+			<link>https://markostojanovic4419.github.io/markostojanovicportfolio/index.html#kontakt</link>
+			<description>Preko kontakt formulara na najlakši i najbrži način možete ostvariti kontakt sa mnom.</description>
+		</item>
+    </channel>
+</rss>
